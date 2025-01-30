@@ -29,7 +29,6 @@ function Signup({ showAlert }) {
             const data = await response.json();
 
             localStorage.setItem("token", data.authToken);
-            console.log('local storage token signup  ', data.authToken);
 
             showAlert("Signup Successful", "success");
             navigate("/notes")

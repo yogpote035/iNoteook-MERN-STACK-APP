@@ -34,7 +34,6 @@ function Login({ showAlert }) {
                 return showAlert("Login Failed: No token received", "danger");
             }
             localStorage.setItem("token", data.authToken);
-            console.log("Stored Token:", localStorage.getItem("token"));
 
             showAlert("Login Successful", "success");
             navigate("/notes");
