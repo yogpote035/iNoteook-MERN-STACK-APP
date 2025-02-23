@@ -7,7 +7,7 @@ const NoteState = ({ children }) => {
     const [note, setNote] = useState([])
 
     const getAllNote = async () => {
-        const url = `http://localhost:5000/api/notes/notes/`;
+        const url = `https://inoteook-mern-stack-app.onrender.com/api/notes/notes`;
 
         const response = await fetch(url, {
             method: "GET",
@@ -25,7 +25,7 @@ const NoteState = ({ children }) => {
 
 
     const addNote = async (title, description, tag) => {
-        const url = "http://localhost:5000/api/notes/notes";
+        const url = "https://inoteook-mern-stack-app.onrender.com/api/notes/notes";
         const response = await fetch(url, {
             method: "POST",
             headers: {
@@ -40,7 +40,7 @@ const NoteState = ({ children }) => {
     };
 
     const deleteNote = async (id) => {
-        const url = `http://localhost:5000/api/notes/delete/${id}`;
+        const url = `https://inoteook-mern-stack-app.onrender.com/api/notes/delete/${id}/`;
         await fetch(url, {
             method: "DELETE",
             headers: {
@@ -53,7 +53,7 @@ const NoteState = ({ children }) => {
 
     const editNote = async (title, description, tag, id) => {
         try {
-            const url = `http://localhost:5000/api/notes/update/${id}`;
+            const url = `https://inoteook-mern-stack-app.onrender.com/api/notes/update/${id}`;
             const response = await fetch(url, {
                 method: "PUT",
                 headers: {

@@ -11,7 +11,7 @@ function Signup({ showAlert }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const url = "http://localhost:5000/api/auth/";
+            const url = "https://inoteook-mern-stack-app.onrender.com/api/auth/";
 
             const response = await fetch(url, {
                 method: "POST",
