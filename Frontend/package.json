@@ -15,10 +15,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "frontend": "cd D:/SIGMA 4.0 Apna College/Web Development/iNoteook-MERN-STACK-APP/frontend && npm start",
-    "backend": "cd D:/SIGMA 4.0 Apna College/Web Development/iNoteook-MERN-STACK-APP/backend && nodemon index.js",
-    "both": "concurrently \"npm run frontend\" \"npm run backend\""
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

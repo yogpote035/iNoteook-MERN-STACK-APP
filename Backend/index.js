@@ -4,6 +4,10 @@ const cors = require("cors");
 const app = express();
 const port = 5000;
 
+if (process.env.NODE_ENV != "production") {
+    require('dotenv').config()
+}
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //connecting To Database 

@@ -120,20 +120,27 @@ function AllNotes({ showAlert }) {
                 <h3 className="text-success text-center">Your Notes</h3>
 
                 <div className="row">
-                    {note.length === 0 ? <p className='text-center text-primary'>It seems you don't have any notes yet. Start by adding a <span className='text-danger'><b> new note!</b></span></p> : note.map((n) => (
-                        <div className="col-md-3 col-sm-4" key={n._id}>
-                            <NoteItem
-                                title={n.title}
-                                description={n.description}
-                                tag={n.tag}
-                                updateNote={() => updateNote(n)}
-                                date={n.date}
-                                showAlert={showAlert}
-                                id={n._id}
-                            />
-                        </div>
-                    ))}
+                    {note.length === 0 ? (
+                        <p className="text-center text-primary">
+                            It seems you don't have any notes yet. Start by adding a <span className="text-danger"><b>new note!</b></span>
+                        </p>
+                    ) : (
+                        note.map((n) => (
+                            <div className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center mb-3" key={n._id}>
+                                <NoteItem
+                                    title={n.title}
+                                    description={n.description}
+                                    tag={n.tag}
+                                    updateNote={() => updateNote(n)}
+                                    date={n.date}
+                                    showAlert={showAlert}
+                                    id={n._id}
+                                />
+                            </div>
+                        ))
+                    )}
                 </div>
+
             </div>
         </>
     );
